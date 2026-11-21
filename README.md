@@ -1,50 +1,85 @@
 # PEP3-2026-MarketPulse
 
-**MARKET PULSE – Real-Time Financial Intelligence Platform**
+**MARKET PULSE — Real-Time Financial Intelligence Platform**
 
-Plataforma web académica para consultar criptomonedas y divisas internacionales, visualizar históricos de mercado y estudiar estimaciones estadísticas de subida, bajada y estabilidad. El proyecto integra datos públicos de Binance Spot y tasas de referencia de Frankfurter, con separación entre presentación, lógica de aplicación y acceso a datos.
+Plataforma web académica para consultar criptomonedas y divisas, visualizar historiales de mercado y estudiar estimaciones estadísticas de subida, bajada y estabilidad.
 
-> **Estado:** versión local funcional v1.0.2 aportada por el equipo. Este repositorio organiza el código y la documentación. El despliegue público aún no está configurado ni debe considerarse activo.
+> **Versión organizada en GitHub:** v1.0.2. El equipo ha informado que la aplicación se ejecuta localmente. El despliegue público todavía no está configurado. Las capturas incorporadas al repositorio deben identificar exactamente la versión que aparece en ellas.
 
 ## Equipo autor
 
-- **Oliver Zunagua**
-- **Camila Andia**
-- **Alison Bejarano**
+- **Oliver Zunagua** — [@Zoliver27](https://github.com/Zoliver27)
+- **Camila Andia** — [@camilita4cami-png](https://github.com/camilita4cami-png)
+- **Alison Bejarano** — [@AlisonBejarano7](https://github.com/AlisonBejarano7)
 
-Las responsabilidades actualmente registradas están en [docs/equipo/roles.md](docs/equipo/roles.md). Los tres integrantes son autores del desarrollo propio; las bibliotecas, fuentes, servicios y datos de terceros mantienen sus respectivas licencias y condiciones.
+Las responsabilidades específicas de MARKET PULSE deben ser confirmadas por cada integrante en [docs/equipo/roles.md](docs/equipo/roles.md). Las revisiones personales están en [docs/seguimiento/revisiones/](docs/seguimiento/revisiones/).
 
-## Funcionalidades de la versión
+## Avance del proyecto
 
-- Dashboard de mercado con diez criptomonedas iniciales: BTC, ETH, SOL, BNB, XRP, ADA, DOGE, LTC, DOT y AVAX.
-- Cotizaciones Spot mediante Binance REST y actualizaciones WebSocket públicas con caché y reconexión.
-- Historiales OHLCV y gráficos interactivos para distintos períodos.
-- Pares FX con datos de referencia diaria de Frankfurter; se conserva la fecha de observación y no se presentan como cotizaciones intradía.
+**Estimación interna orientativa del MVP funcional: aproximadamente 80%.** Es una autoevaluación inicial del equipo, no una certificación del docente ni una declaración de que el producto esté listo para producción. La estimación debe contrastarse con las funciones efectivamente probadas. La persistencia propia de datos, pruebas integrales y despliegue público siguen pendientes; el comparador requiere validación funcional.
+
+Consulta la [matriz de cumplimiento de la rúbrica](docs/seguimiento/matriz-rubrica.md) para revisar componentes implementados y tareas pendientes.
+
+## Funcionalidades incluidas
+
+- Dashboard general con diez criptomonedas iniciales: BTC, ETH, SOL, BNB, XRP, ADA, DOGE, LTC, DOT y AVAX.
+- Cotizaciones Spot de Binance mediante REST y actualizaciones WebSocket públicas.
+- Consulta de historial OHLCV y gráficos de precios de criptomonedas.
+- Consulta de pares de divisas y series históricas de referencia mediante Frankfurter.
 - Indicadores SMA, EMA, RSI, MACD, bandas de Bollinger y volatilidad histórica.
-- Estimación empírica de tres resultados: subida, bajada y estabilidad, con suavizado de Laplace e intervalos de Wilson.
+- Estimación empírica de subida, bajada y estabilidad con suavizado de Laplace e intervalos de Wilson.
 - Backtesting walk-forward y métricas de evaluación cuando existe muestra suficiente.
-- Comparador de rendimiento relativo, metodología y sección de información del proyecto.
+- Secciones de criptomonedas, divisas, comparador, metodología e información del proyecto.
+
+El estado de cada componente y sus limitaciones están descritos en [docs/seguimiento/matriz-rubrica.md](docs/seguimiento/matriz-rubrica.md).
+
+## Lenguajes y tecnologías
+
+| Área | Tecnología |
+|---|---|
+| Lenguajes | TypeScript y JavaScript |
+| Interfaz | React, TypeScript y Vite |
+| API / backend | Node.js y Express |
+| Visualización | Recharts |
+| Datos de mercado | Binance Spot REST y WebSocket |
+| Divisas | Frankfurter API v2 |
+| Pruebas | Node.js Test Runner y TypeScript |
+
+## Base de datos y gestión de datos
+
+**Actualmente no hay una base de datos persistente implementada.** No se debe afirmar que el proyecto utiliza MySQL, PostgreSQL, SQL Server, MongoDB u otra base de datos.
+
+La aplicación consulta proveedores externos. El backend mantiene una caché temporal en memoria para cotizaciones; esa caché se pierde al reiniciar el servidor. No existe en esta versión un repositorio histórico propio ni persistencia de usuarios.
+
+- **Criptomonedas:** Binance Spot REST para tickers e históricos OHLCV; WebSocket público para actualizaciones de precios.
+- **Divisas:** Frankfurter API v2 para tasas de referencia e historiales diarios.
+- **Gestión:** validación de respuestas, manejo de errores, caché temporal y presentación de fuente/fecha cuando está disponible.
+- **Frecuencia:** Binance ofrece datos de mercado y stream; Frankfurter proporciona tasas de referencia, no cotizaciones intradía de trading.
+
+Más detalles: [fuentes y APIs](docs/arquitectura/apis.md) y [estado del proyecto](docs/seguimiento/matriz-rubrica.md).
 
 ## Arquitectura y estructura
 
 ```text
 PEP3-2026-MarketPulse/
 ├── .github/                 # Plantillas y automatización de GitHub
-├── data/                    # Política, muestras y esquemas de datos
+├── data/                    # Política, muestras y esquemas
 ├── docs/
-│   ├── arquitectura/        # Arquitectura y APIs externas
-│   ├── decisiones/         # Historial y decisiones técnicas
+│   ├── arquitectura/        # Arquitectura y APIs
+│   ├── decisiones/         # Decisiones técnicas e historial
 │   ├── equipo/             # Autores y responsabilidades
-│   ├── manuales/           # Instalación, uso y pruebas
-│   ├── planificacion/      # Fases y tareas
-│   ├── presentaciones/     # Material académico
-│   ├── propuesta/          # Descripción y metodología
-│   └── requisitos/         # Alcance y requisitos
-├── resources/               # Recursos originales del equipo
+│   ├── evidencias/          # Capturas verificables del funcionamiento
+│   ├── manuales/            # Instalación, uso y pruebas
+│   ├── planificacion/       # Fases y tareas
+│   ├── presentaciones/      # Material académico
+│   ├── propuesta/           # Alcance y metodología
+│   ├── requisitos/          # Requisitos
+│   └── seguimiento/         # Rúbrica, contribuciones y revisiones
+├── resources/               # Recursos del proyecto
 ├── src/
-│   ├── Datos/              # Binance, Frankfurter, contratos y caché
-│   ├── Logica/             # API Express, indicadores y modelo estadístico
-│   └── Presentacion/       # React, TypeScript, Vite y estilos
+│   ├── Datos/               # Binance, Frankfurter, contratos y caché
+│   ├── Logica/              # API, indicadores y motor estadístico
+│   └── Presentacion/        # React, TypeScript, Vite y estilos
 ├── tests/                   # Pruebas automatizadas
 ├── .env.example
 ├── install.bat / start.bat
@@ -56,18 +91,20 @@ PEP3-2026-MarketPulse/
 
 - Node.js 20 o superior.
 - npm 10 o superior.
-- Conexión a Internet para consultar los proveedores de datos.
-- Windows 10/11 (los comandos npm también pueden utilizarse en macOS/Linux).
+- Conexión a Internet para consultar los proveedores.
+- Windows 10/11 recomendado para los scripts `.bat`.
 
-## Instalación en Windows
+## Instalación y ejecución local
 
-1. Clona o descarga este repositorio y abre la carpeta raíz en Visual Studio Code.
-2. Abre la terminal integrada.
-3. Ejecuta `install.bat` una sola vez. El script copia `.env.example` a `.env` si todavía no existe e instala las dependencias.
-4. Ejecuta `start.bat`.
-5. Abre http://localhost:5173. La API local está disponible en http://localhost:4000/api/health.
+1. Clonar o descargar el repositorio y abrir la carpeta raíz en Visual Studio Code.
+2. Abrir **Terminal → Nueva terminal**.
+3. Ejecutar `install.bat` una sola vez.
+4. Ejecutar `start.bat`.
+5. Abrir http://localhost:5173.
 
-También puedes ejecutar manualmente:
+La API local responde en http://localhost:4000/api/health.
+
+También se puede realizar manualmente:
 
 ```powershell
 Copy-Item .env.example .env
@@ -75,55 +112,55 @@ npm install
 npm run dev
 ```
 
-## Comandos principales
+## Comandos
 
 | Comando | Propósito |
 |---|---|
-| `npm run dev` | Inicia API y frontend en desarrollo |
-| `npm run dev:backend` | Inicia únicamente la API |
-| `npm run dev:frontend` | Inicia únicamente el frontend |
-| `npm test` | Ejecuta las pruebas estadísticas |
+| `npm run dev` | Inicia frontend y API en desarrollo |
+| `npm run dev:backend` | Inicia solo el backend |
+| `npm run dev:frontend` | Inicia solo el frontend |
+| `npm test` | Ejecuta pruebas del motor estadístico |
 | `npm run typecheck` | Comprueba tipos TypeScript |
 | `npm run build` | Compila backend y frontend |
 | `npm start` | Inicia la API compilada |
 
-## Fuentes de información
+## Evidencias de funcionamiento
 
-### Binance Spot
+El directorio [docs/evidencias/](docs/evidencias/) explica cómo registrar capturas reales. La captura inicial compartida durante el trabajo muestra una versión anterior (v1.0.0); no se presenta como evidencia de v1.0.2. Antes de enviar la actividad, subir capturas recientes de v1.0.2 que muestren Overview, Criptomonedas, Divisas FX, Comparador y Metodología, con datos auténticos y sin credenciales visibles.
 
-Se utilizan endpoints públicos REST para tickers e históricos OHLCV y un stream público WebSocket para cotizaciones. No se realizan operaciones ni movimientos de fondos y esta versión no requiere claves API para los endpoints utilizados.
+## Participación y commits
 
-- Documentación: https://github.com/binance/binance-spot-api-docs
-- REST: `https://data-api.binance.vision`
-- WebSocket: `wss://data-stream.binance.vision/stream`
+Cada integrante debe revisar el proyecto y registrar su propia contribución desde su cuenta GitHub. No se deben crear commits a nombre de otra persona ni atribuirle trabajo que no haya realizado.
 
-### Frankfurter
+El [registro de contribuciones](docs/seguimiento/contribuciones.md) distingue los commits históricos de la participación específica en la versión actual. Los Issues de seguimiento han sido asignados individualmente:
+- [Revisión de Alison — Issue #3](https://github.com/Zoliver27/PEP3-2026-MarketPulse/issues/3)
+- [Revisión de Camila — Issue #4](https://github.com/Zoliver27/PEP3-2026-MarketPulse/issues/4)
+- [Revisión de Oliver — Issue #5](https://github.com/Zoliver27/PEP3-2026-MarketPulse/issues/5)
 
-Se consulta API v2 para tipos de cambio de referencia e historiales. Las tasas no deben interpretarse como precios ejecutables ni cotizaciones intradía.
+## Fuentes externas
 
-- Documentación: https://frankfurter.dev/
-- API: `https://api.frankfurter.dev/v2`
+- **Binance Spot:** https://github.com/binance/binance-spot-api-docs
+- **Frankfurter:** https://frankfurter.dev/
 
-La cobertura y disponibilidad dependen de cada proveedor. La aplicación debe mostrar errores o falta de cobertura en lugar de inventar valores.
+Se utilizan endpoints públicos de consulta; no se realizan operaciones ni movimientos de fondos. Las tasas de Frankfurter son referencias diarias y no precios ejecutables.
 
-## Metodología estadística
+## Pruebas y validación
 
-El modelo calcula rendimientos para el horizonte seleccionado, clasifica cada observación como subida, bajada o estabilidad mediante un umbral neutral basado en volatilidad, aplica suavizado de Laplace y normaliza las probabilidades. Requiere al menos 30 observaciones históricas. Los intervalos de Wilson son descriptivos y las ventanas solapadas introducen dependencia serial. El backtesting walk-forward utiliza únicamente observaciones previas en cada predicción.
+Existen pruebas unitarias del motor probabilístico en `tests/analytics/probability.test.ts`. Antes de declarar una entrega validada, ejecutar `npm test`, `npm run typecheck` y `npm run build` desde la raíz. La compilación completa y las pruebas de integración deben comprobarse en el entorno del equipo; no se consideran aprobadas solo porque estén descritas en la documentación.
 
-Los indicadores técnicos contextualizan los resultados; no reciben pesos subjetivos en la estimación principal. Los detalles matemáticos y las limitaciones se documentan en [docs/propuesta/metodologia.md](docs/propuesta/metodologia.md).
+## Documentación académica
 
-## Seguridad y datos
+- [Propuesta y descripción](docs/propuesta/README.md)
+- [Metodología matemática](docs/propuesta/metodologia.md)
+- [Arquitectura y APIs](docs/arquitectura/README.md)
+- [Requisitos](docs/requisitos/README.md)
+- [Manual de instalación](docs/manuales/instalacion.md)
+- [Manual de usuario](docs/manuales/manual_usuario.md)
+- [Pruebas](docs/manuales/pruebas.md)
+- [Matriz de la rúbrica](docs/seguimiento/matriz-rubrica.md)
+- [Registro de contribuciones](docs/seguimiento/contribuciones.md)
+- [Evidencias](docs/evidencias/README.md)
 
-- No subir `.env`, tokens, claves privadas ni datos personales.
-- `.env.example` contiene únicamente nombres de configuración y valores por defecto no secretos.
-- No subir `node_modules`, `dist`, cachés, logs ni archivos temporales.
-- Utilizar exclusivamente datos públicos o cuyo uso esté autorizado.
-- Revisar términos de los proveedores antes de cualquier despliegue público.
+## Licencia y aviso
 
-## Pruebas y estado de validación
-
-Las pruebas unitarias del motor probabilístico se ejecutan mediante `npm test`. Las pruebas de integración externa, compilación integral y validación del despliegue deberán registrarse después de ejecutarse en un entorno con dependencias instaladas y acceso a los proveedores. No se debe inferir que una prueba pasó por el mero hecho de que exista su documentación.
-
-## Licencia y aviso financiero
-
-El código propio se distribuye bajo MIT; consulta [LICENSE](LICENSE). Los mercados financieros son impredecibles. Las probabilidades describen frecuencias históricas bajo una definición matemática y no garantizan resultados futuros. MARKET PULSE es una herramienta académica e informativa, no asesoramiento financiero ni recomendación de inversión.
+El código propio se distribuye bajo MIT; consulta [LICENSE](LICENSE). Las estimaciones describen frecuencias históricas bajo una definición matemática, no garantizan resultados futuros y no constituyen asesoramiento financiero.

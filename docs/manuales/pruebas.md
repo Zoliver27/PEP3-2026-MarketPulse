@@ -1,27 +1,23 @@
 # Pruebas y validación
 
-## Pruebas automatizadas
+## Pruebas automatizadas existentes
 
-`tests/analytics/probability.test.ts` contiene tres pruebas del motor probabilístico:
+El proyecto incluye `tests/analytics/probability.test.ts` con casos para la lógica probabilística y backtesting. La existencia de los archivos de prueba no demuestra por sí misma que el estado actual de `main` haya pasado todas las validaciones.
 
-1. La estimación no está disponible cuando existen menos de 30 observaciones.
-2. Las probabilidades son finitas y suman 1 (100 %).
-3. El backtesting walk-forward devuelve métricas cuando hay suficientes observaciones de evaluación.
+## Ejecutar en el equipo
 
-Ejecutar desde la raíz:
+Desde la raíz del repositorio, después de instalar dependencias:
 
 ```powershell
+npm install
 npm test
-```
-
-## Comprobaciones complementarias
-
-```powershell
 npm run typecheck
 npm run build
 ```
 
-Antes de una versión pública también debe verificarse:
+Guardar la salida real de cada comando y registrar fecha, sistema operativo y versión de Node.js/npm. Si un comando falla, anotar el error; no marcarlo como aprobado.
+
+## Comprobaciones manuales recomendadas
 
 - `GET /api/health`.
 - Carga de mercado `GET /api/market/crypto`.
@@ -31,12 +27,8 @@ Antes de una versión pública también debe verificarse:
 - Actualización manual y automática de datos.
 - Navegación, accesibilidad básica y vistas móvil/escritorio.
 - Comportamiento cuando los proveedores están fuera de servicio.
+- Comparación de dos activos, comprobando que los periodos y las monedas base sean comparables.
 
-## Validación registrada durante la migración
+## Estado de validación de la entrega
 
-- TypeScript: comprobación de tipos del backend y frontend completada sin errores.
-- Backend: compilación TypeScript completada.
-- Motor estadístico: tres pruebas ejecutadas con transpilación TypeScript y Node.js; 3 aprobadas.
-- Compilación final de Vite y llamadas externas en producción: pendientes de verificación en un entorno con las dependencias correctas y acceso a los proveedores.
-
-No se debe presentar una comprobación pendiente como prueba superada.
+La compilación integral y las llamadas externas no se declaran verificadas para el commit actual hasta que el equipo ejecute los comandos en su entorno y archive los resultados. Mantener los resultados de pruebas en un documento fechado o adjuntar logs sin credenciales.
