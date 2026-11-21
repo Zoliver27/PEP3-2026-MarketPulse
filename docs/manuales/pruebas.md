@@ -2,9 +2,26 @@
 
 ## Pruebas automatizadas existentes
 
-El proyecto incluye `tests/analytics/probability.test.ts` con casos para la lógica probabilística y backtesting. La existencia de los archivos de prueba no demuestra por sí misma que el estado actual de `main` haya pasado todas las validaciones.
+El proyecto incluye `tests/analytics/probability.test.ts` con casos para la lógica probabilística y backtesting.
 
-## Ejecutar en el equipo
+## Validación continua de GitHub Actions
+
+El workflow `Market Pulse CI` se ejecutó correctamente sobre el commit `5ba2f6c970026b67e014ae5ad744589930b69456` (21 de noviembre de 2026).
+
+| Paso ejecutado en GitHub Actions | Resultado |
+|---|---|
+| Checkout del repositorio | Correcto |
+| Configuración de Node.js 22 | Correcto |
+| `npm install` | Correcto |
+| `npm test` | Correcto |
+| `npm run typecheck` | Correcto |
+| `npm run build` | Correcto |
+
+Ejecución verificable: [Market Pulse CI — Run #44948013705](https://github.com/Zoliver27/PEP3-2026-MarketPulse/actions/runs/44948013705).
+
+Esto demuestra que el repositorio se instaló, ejecutó las pruebas, pasó el chequeo TypeScript y compiló en el runner Ubuntu/Node.js 22 de GitHub Actions. No demuestra por sí mismo que las pruebas manuales de UI o los proveedores externos funcionen en todos los escenarios ni que el sistema esté desplegado públicamente.
+
+## Ejecutar también en el equipo
 
 Desde la raíz del repositorio, después de instalar dependencias:
 
@@ -29,6 +46,6 @@ Guardar la salida real de cada comando y registrar fecha, sistema operativo y ve
 - Comportamiento cuando los proveedores están fuera de servicio.
 - Comparación de dos activos, comprobando que los periodos y las monedas base sean comparables.
 
-## Estado de validación de la entrega
+## Estado de validación pendiente
 
-La compilación integral y las llamadas externas no se declaran verificadas para el commit actual hasta que el equipo ejecute los comandos en su entorno y archive los resultados. Mantener los resultados de pruebas en un documento fechado o adjuntar logs sin credenciales.
+Las pruebas manuales de la interfaz v1.0.2, comprobación de los proveedores en ejecución, evaluación del comparador y despliegue público aún deben registrarse por el equipo. Adjuntar capturas y resultados reales; no sustituirlos por inferencias a partir de la CI.

@@ -2,6 +2,8 @@
 
 **MARKET PULSE — Real-Time Financial Intelligence Platform**
 
+[![Market Pulse CI](https://github.com/Zoliver27/PEP3-2026-MarketPulse/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Zoliver27/PEP3-2026-MarketPulse/actions/workflows/ci.yml)
+
 Plataforma web académica para consultar criptomonedas y divisas, visualizar historiales de mercado y estudiar estimaciones estadísticas de subida, bajada y estabilidad.
 
 > **Versión organizada en GitHub:** v1.0.2. El equipo ha informado que la aplicación se ejecuta localmente. El despliegue público todavía no está configurado. Las capturas incorporadas al repositorio deben identificar exactamente la versión que aparece en ellas.
@@ -16,7 +18,7 @@ Las responsabilidades específicas de MARKET PULSE deben ser confirmadas por cad
 
 ## Avance del proyecto
 
-**Estimación interna orientativa del MVP funcional: aproximadamente 80%.** Es una autoevaluación inicial del equipo, no una certificación del docente ni una declaración de que el producto esté listo para producción. La estimación debe contrastarse con las funciones efectivamente probadas. La persistencia propia de datos, pruebas integrales y despliegue público siguen pendientes; el comparador requiere validación funcional.
+**Estimación interna orientativa del MVP funcional: aproximadamente 80%.** Es una autoevaluación inicial del equipo, no una certificación del docente ni una declaración de que el producto esté listo para producción. La estimación debe contrastarse con las funciones efectivamente probadas. La persistencia propia de datos y el despliegue público siguen pendientes; el comparador requiere validación funcional.
 
 Consulta la [matriz de cumplimiento de la rúbrica](docs/seguimiento/matriz-rubrica.md) para revisar componentes implementados y tareas pendientes.
 
@@ -126,7 +128,7 @@ npm run dev
 
 ## Evidencias de funcionamiento
 
-El directorio [docs/evidencias/](docs/evidencias/) explica cómo registrar capturas reales. La captura inicial compartida durante el trabajo muestra una versión anterior (v1.0.0); no se presenta como evidencia de v1.0.2. Antes de enviar la actividad, subir capturas recientes de v1.0.2 que muestren Overview, Criptomonedas, Divisas FX, Comparador y Metodología, con datos auténticos y sin credenciales visibles.
+El directorio [docs/evidencias/](docs/evidencias/) explica cómo registrar capturas reales. Antes de enviar la actividad, subir capturas recientes de v1.0.2 que muestren Overview, Criptomonedas, Divisas FX, Comparador y Metodología, con datos auténticos y sin credenciales visibles.
 
 ## Participación y commits
 
@@ -146,7 +148,9 @@ Se utilizan endpoints públicos de consulta; no se realizan operaciones ni movim
 
 ## Pruebas y validación
 
-Existen pruebas unitarias del motor probabilístico en `tests/analytics/probability.test.ts`. Antes de declarar una entrega validada, ejecutar `npm test`, `npm run typecheck` y `npm run build` desde la raíz. La compilación completa y las pruebas de integración deben comprobarse en el entorno del equipo; no se consideran aprobadas solo porque estén descritas en la documentación.
+El workflow de GitHub Actions **Market Pulse CI** se ejecutó con éxito para el commit de documentación más reciente (21 de noviembre de 2026): instalación de dependencias, pruebas estadísticas, chequeo de tipos y compilación. [Consultar ejecución y logs](https://github.com/Zoliver27/PEP3-2026-MarketPulse/actions/runs/44948013705).
+
+Esta verificación automatizada no sustituye las pruebas manuales de pantallas ni la evidencia visual de la versión v1.0.2. Las comprobaciones externas y el despliegue público siguen siendo tareas del equipo.
 
 ## Documentación académica
 
