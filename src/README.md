@@ -1,3 +1,3 @@
 # Código fuente
 
-Esta carpeta está reservada para el código de la aplicación. Todavía no se crea un proyecto ejecutable ni se decide la tecnología de interfaz.
+El código se organiza por responsabilidad: `Presentacion/` contiene la aplicación React; `Logica/` contiene la API y el motor de análisis; `Datos/` concentra proveedores externos, contratos de datos, caché y utilidades de acceso. La configuración común del proyecto está en la raíz.

@@ -1,5 +1,3 @@
-# Datos de trabajo
+# Datos
 
-Esta carpeta está destinada a datos de ejemplo y documentación de esquemas. Usar únicamente datos sintéticos o debidamente anonimizados y autorizados.
-
-No subir registros reales de la red universitaria, credenciales ni información personal.
+El sistema consulta datos de mercado directamente desde Binance y Frankfurter a través del backend. No se incluyen precios simulados ni cotizaciones ficticias. Utiliza `samples/` únicamente para datasets sintéticos claramente identificados y `schemas/` para describir formatos de datos. No subir información sensible ni registros no autorizados.

@@ -1,3 +1,3 @@
-# Datos
+# Acceso a datos
 
-Carpeta propuesta para la importación, validación y acceso a datos cuando se implemente esa parte. No guardar aquí registros reales o sensibles.
+`providers/` contiene las integraciones con Binance y Frankfurter; `services/market-cache.ts` conserva temporalmente cotizaciones en memoria; `types.ts` y `utils/http.ts` definen contratos y utilidades compartidas. No se suben credenciales ni datos privados.

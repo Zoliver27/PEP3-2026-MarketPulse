@@ -1,3 +1,7 @@
-# Equipo
+# Equipo autor
 
-Aquí se documentan los integrantes y las responsabilidades confirmadas. El archivo `roles.md` consolida la información de los archivos de integrantes que estaban en la raíz.
+- Oliver Matías Zunagua Arce
+- Alison Bejarano Fuertes
+- Camila Isabella Andia Sánchez
+
+Las responsabilidades registradas se mantienen en [roles.md](roles.md).

@@ -1,3 +1,3 @@
-# Lógica
+# Lógica de aplicación
 
-Carpeta propuesta para las reglas de negocio y los cálculos estadísticos una vez que el equipo defina la arquitectura. Aún no contiene código de lógica.
+Contiene el servidor Express, rutas HTTP, configuración, indicadores, estimación probabilística y backtesting. La lógica no debe llamar directamente a servicios externos: utiliza los módulos de `src/Datos/`.

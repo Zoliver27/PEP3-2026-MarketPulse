@@ -1,5 +1,4 @@
-# Arquitectura
+# Arquitectura y APIs
 
-Guardar aquí diagramas, decisiones y documentación de arquitectura una vez que el equipo acuerde el diseño.
-
-La tecnología de interfaz (por ejemplo, WinForms o WPF) y la estructura técnica definitiva siguen pendientes de confirmación.
+- [Arquitectura técnica](arquitectura.md): separación de presentación, lógica y datos; flujos de mercado y FX.
+- [Fuentes externas y APIs](apis.md): endpoints públicos, frecuencia de datos y política de uso.

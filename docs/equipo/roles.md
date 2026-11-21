@@ -1,6 +1,6 @@
 # Equipo y responsabilidades
 
-Proyecto: Sistema de Análisis Estadístico de Uso de Red Universitaria.
+Proyecto: **MARKET PULSE – Real-Time Financial Intelligence Platform**.
 
 | Integrante | Responsabilidad registrada |
 |---|---|
@@ -8,4 +8,6 @@ Proyecto: Sistema de Análisis Estadístico de Uso de Red Universitaria.
 | Alison Bejarano Fuertes | Programación |
 | Camila Isabella Andia Sánchez | Programación, BugFixer |
 
-Estas responsabilidades se transcriben de los archivos de integrantes existentes en el repositorio. No se asignan responsabilidades adicionales.
+Las responsabilidades se conservan tal como estaban registradas en el repositorio académico anterior. Su distribución específica dentro de MARKET PULSE puede actualizarse por acuerdo del equipo.
+
+Los tres integrantes figuran como autores del proyecto. Las librerías, servicios, APIs, marcas y datos de terceros conservan sus derechos y condiciones correspondientes.

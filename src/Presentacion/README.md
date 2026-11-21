@@ -1,3 +1,3 @@
 # Presentación
 
-Carpeta propuesta para la interfaz de usuario cuando se confirme la tecnología y se cree el proyecto correspondiente. Aún no contiene código de interfaz.
+Aplicación de interfaz React + TypeScript + Vite. Sus componentes visuales y estilos están dentro de `src/`; el cliente HTTP está en `src/services/`. La interfaz se comunica únicamente con la API de Market Pulse.

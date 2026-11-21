@@ -1,19 +1,17 @@
-# Planificación
+# Planificación y estado
 
-Guardar aquí el cronograma/Gantt, hitos y planificación de entregas.
+## Fases de evolución
+1. **Base funcional:** frontend, API, proveedores, gráficos y navegación.
+2. **Validación de datos:** comprobar respuestas reales, marcas temporales, cobertura FX y tolerancia a fallos.
+3. **Validación estadística:** revisar tamaño muestral, calibración, backtesting y estabilidad temporal del modelo.
+4. **Calidad y seguridad:** pruebas unitarias, integración, accesibilidad, CORS y gestión de configuración.
+5. **Publicación web:** configurar despliegue separado de frontend y backend, variables de entorno, CORS público, observabilidad y política de disponibilidad.
 
-## Documentos revisados
+## Estado documentado
+La versión incluida se ejecutó localmente por el equipo y se corrigieron los controles de la interfaz reportados. Las pruebas unitarias del motor probabilístico existen en `tests/analytics/`. La compilación integral, pruebas de integración externas y el despliegue público deben registrarse solo después de ejecutarlos en un entorno con dependencias instaladas y acceso a los proveedores.
 
-- `Diagrama de Gantt del sistema de análisis estadístico.pdf`: cronograma de una página con fechas de octubre a diciembre de 2026.
-- `Diagrama de Gant.xlsx`: hoja de cálculo con las mismas actividades y rangos de fechas; las celdas de las actividades no contienen marcas de duración, por lo que parece una plantilla sin barras completadas.
-
-## Hitos indicados en el PDF
-
-- Permisos y datos: obtener datos hasta el 18 de octubre de 2026.
-- Procesamiento: hasta el 15 de noviembre de 2026.
-- Integración y pruebas: hasta el 13 de diciembre de 2026.
-- Documentación y presentación: hasta el 20 de diciembre de 2026.
-
-El Gantt contiene actividades que se solapan entre periodos. Confirmar el cronograma con el equipo y el docente antes de tratar las fechas como compromisos definitivos.
-
-**Pendiente:** incorporar los dos archivos originales al repositorio.
+## Próximas tareas sugeridas
+- Añadir pruebas de integración para los endpoints REST con proveedores simulados.
+- Registrar resultados de backtesting por activo y horizonte en un conjunto de evaluación separado.
+- Evaluar calibración de probabilidades con partición temporal y datos no solapados.
+- Definir alojamiento, variables de entorno y dominio cuando se acuerde el despliegue.

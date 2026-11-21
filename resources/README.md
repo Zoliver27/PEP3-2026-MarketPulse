@@ -1,3 +1,3 @@
 # Recursos
 
-Guardar aquí recursos del proyecto que puedan versionarse y compartirse, por ejemplo iconos o imágenes propias. Evitar binarios generados, archivos con licencia incompatible y datos sensibles.
+Almacenar aquí recursos visuales originales del proyecto, diagramas y material compartible. Para logos, tipografías, iconos o capturas de terceros, respetar sus licencias y registrar la procedencia. No duplicar archivos que ya estén documentados en `docs/`.
