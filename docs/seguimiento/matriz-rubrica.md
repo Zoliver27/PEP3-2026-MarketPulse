@@ -1,13 +1,13 @@
 # Matriz de cumplimiento de la rúbrica
 
-Fecha de revisión: 21 de noviembre de 2026.  
+Fecha de revisión: 25 de noviembre de 2026.  
 Repositorio: [Zoliver27/PEP3-2026-MarketPulse](https://github.com/Zoliver27/PEP3-2026-MarketPulse), rama `main`.
 
 | Requisito de la rúbrica | Estado en el repositorio | Evidencia / acción necesaria |
 |---|---|---|
 | Código fuente actualizado | **Incluido** | `src/Presentacion/`, `src/Logica/`, `src/Datos/` |
 | README con descripción, funciones e instrucciones | **Incluido y actualizado** | `README.md` |
-| Evidencias mediante capturas | **Pendiente de subir** | Añadir capturas actuales de v1.0.2 a `docs/evidencias/capturas/`. Las capturas compartidas en el chat no están aún publicadas en el árbol del repositorio. |
+| Evidencias mediante capturas | **Pendiente de subir** | El PDF compartido contiene 5 páginas de capturas, pero el archivo PDF y sus imágenes aún no están incorporados al árbol GitHub. Añadirlo y/o extraer capturas verificadas a `docs/evidencias/capturas/`. |
 | Historial de commits identificable | **Existe, requiere refuerzo para esta versión** | Consultar [contribuciones.md](contribuciones.md). Los commits históricos de Alison y Camila identifican cargas de archivos de equipo en el repositorio anterior; no son commits de código de MARKET PULSE. |
 | Participación activa de cada integrante | **En proceso** | Cada integrante tiene un Issue asignado y debe publicar una revisión y una contribución propia relacionada con MARKET PULSE. |
 | Revisión de lenguaje, base de datos, gestión de datos y funcionalidades | **Preparada; revisiones individuales pendientes** | Cada integrante completa su ficha en `revisiones/` y comenta en su Issue asignado. |
@@ -43,7 +43,7 @@ La estimación de avance **aproximadamente 80%** es una autoevaluación interna 
 | Modelo de probabilidades | Incluido | Subida, bajada y estabilidad con muestra mínima |
 | Indicadores técnicos | Incluido | SMA, EMA, RSI, MACD, Bollinger y volatilidad |
 | Backtesting walk-forward | Incluido | Métricas condicionadas a muestra suficiente |
-| Comparador | Requiere validación funcional | Verificar en ejecución la comparación de ambas series |
+| Comparador | Implementado en la fuente v1.0.2 compartida; sincronización/validación GitHub pendiente | El ZIP inspeccionado contiene dos series normalizadas a Base 100, intersección temporal y dos líneas. Falta publicar el código exacto en `main` y ejecutar la prueba end-to-end con pares distintos. |
 | Persistencia propia de datos | No implementada | No hay base de datos ni histórico propio |
 | Pruebas automatizadas en CI | **Aprobadas** | GitHub Actions completó `npm install`, `npm test`, `npm run typecheck` y `npm run build` correctamente. [Ver Run #44948013705](https://github.com/Zoliver27/PEP3-2026-MarketPulse/actions/runs/44948013705). |
 | Pruebas manuales y despliegue | Pendiente de validar | Pruebas visuales de v1.0.2, proveedores externos y hosting público |
