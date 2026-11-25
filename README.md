@@ -18,7 +18,7 @@ Las responsabilidades específicas de MARKET PULSE deben ser confirmadas por cad
 
 ## Avance del proyecto
 
-**Estimación interna orientativa del MVP funcional: aproximadamente 80%.** Es una autoevaluación inicial del equipo, no una certificación del docente ni una declaración de que el producto esté listo para producción. La estimación debe contrastarse con las funciones efectivamente probadas. La persistencia propia de datos y el despliegue público siguen pendientes; el comparador requiere validación funcional.
+**Estimación interna orientativa del MVP funcional: aproximadamente 80%.** Es una autoevaluación inicial del equipo, no una certificación del docente ni una declaración de que el producto esté listo para producción. La estimación debe contrastarse con las funciones efectivamente probadas. La persistencia propia de datos y el despliegue público siguen pendientes. En el código fuente v1.0.2 compartido por el equipo, el comparador implementa dos series normalizadas a Base 100 y alineación temporal; falta sincronizar esa versión completa al árbol de GitHub y registrar la validación end-to-end.
 
 Consulta la [matriz de cumplimiento de la rúbrica](docs/seguimiento/matriz-rubrica.md) para revisar componentes implementados y tareas pendientes.
 
@@ -33,7 +33,7 @@ Consulta la [matriz de cumplimiento de la rúbrica](docs/seguimiento/matriz-rubr
 - Backtesting walk-forward y métricas de evaluación cuando existe muestra suficiente.
 - Secciones de criptomonedas, divisas, comparador, metodología e información del proyecto.
 
-El estado de cada componente y sus limitaciones están descritos en [docs/seguimiento/matriz-rubrica.md](docs/seguimiento/matriz-rubrica.md).
+El estado de cada componente y sus limitaciones están descritos en [docs/seguimiento/matriz-rubrica.md](docs/seguimiento/matriz-rubrica.md). La implementación del comparador en el ZIP v1.0.2 ya contempla dos curvas; la publicación y comprobación de esa versión en GitHub siguen pendientes.
 
 ## Lenguajes y tecnologías
 
@@ -128,7 +128,7 @@ npm run dev
 
 ## Evidencias de funcionamiento
 
-El directorio [docs/evidencias/](docs/evidencias/) explica cómo registrar capturas reales. Antes de enviar la actividad, subir capturas recientes de v1.0.2 que muestren Overview, Criptomonedas, Divisas FX, Comparador y Metodología, con datos auténticos y sin credenciales visibles.
+El directorio [docs/evidencias/](docs/evidencias/) explica cómo registrar capturas reales. Las imágenes del PDF compartido en la conversación todavía no están publicadas como archivos en este repositorio. Antes de enviar la actividad, incorporarlas a `docs/evidencias/capturas/` y comprobar que muestran v1.0.2, con datos auténticos y sin credenciales visibles.
 
 ## Participación y commits
 
