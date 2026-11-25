@@ -2,13 +2,15 @@
 
 La rúbrica exige capturas de pantalla que demuestren el funcionamiento real del sistema.
 
-## Estado de las evidencias
+## Estado al 25 de noviembre de 2026
 
-A la fecha de esta revisión, **las capturas de la aplicación compartidas en el chat no se han incorporado como archivos de imagen al repositorio GitHub**. Para no crear una evidencia ficticia ni presentar una captura anterior como si fuera v1.0.2, esta carpeta contiene las instrucciones de registro; falta subir las imágenes actuales desde el equipo del grupo.
+El equipo compartió un PDF de evidencias de cinco páginas en la conversación de trabajo. **Ese PDF todavía no está almacenado en este repositorio**. No se debe afirmar que GitHub ya contiene esas capturas hasta que aparezcan como archivos versionados en esta carpeta.
+
+El ZIP v1.0.2 compartido contiene una implementación del comparador con dos series de precios normalizadas a Base 100 y alineadas por marca temporal. Esa inspección de código no sustituye una captura de la aplicación en ejecución ni una validación end-to-end.
 
 ## Capturas que deben incorporarse
 
-Tomar directamente desde v1.0.2 en ejecución:
+Guardar las imágenes reales en `docs/evidencias/capturas/` y conservar el PDF original como evidencia agrupada, si el tamaño y las políticas del repositorio lo permiten.
 
 1. Overview general con fecha y conexión visibles.
 2. Detalle de una criptomoneda y su gráfico.
@@ -16,10 +18,8 @@ Tomar directamente desde v1.0.2 en ejecución:
 4. Comparador con dos activos seleccionados y resultado visible.
 5. Vista de Metodología o backtesting.
 
-Guardar los archivos en `docs/evidencias/capturas/` con nombres descriptivos, por ejemplo `overview-v1.0.2.png`, `crypto-btc-v1.0.2.png`, `fx-v1.0.2.png`, `comparador-v1.0.2.png` y `metodologia-v1.0.2.png`.
-
-En cada captura, la versión visible debe coincidir con el nombre del archivo. No utilizar datos inventados, no alterar la interfaz para aparentar estados que no se observaron y no incluir tokens, archivos `.env`, credenciales o información personal.
+Nombres sugeridos: `overview-v1.0.2.png`, `crypto-btc-v1.0.2.png`, `fx-v1.0.2.png`, `comparador-v1.0.2.png` y `metodologia-v1.0.2.png`.
 
 ## Criterio de autenticidad
 
-Una captura demuestra únicamente lo que se ve en pantalla en ese momento. No sustituye a pruebas automatizadas, al historial de commits ni a la revisión individual de los integrantes.
+Una captura demuestra únicamente lo que se ve en pantalla en ese momento. No sustituye a pruebas automatizadas, al historial de commits ni a la revisión individual. No utilizar datos inventados ni incluir tokens, archivos `.env`, credenciales o información personal.
