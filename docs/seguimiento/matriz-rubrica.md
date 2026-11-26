@@ -5,13 +5,13 @@ Repositorio: [Zoliver27/PEP3-2026-MarketPulse](https://github.com/Zoliver27/PEP3
 
 | Requisito de la rúbrica | Estado en el repositorio | Evidencia / acción necesaria |
 |---|---|---|
-| Código fuente actualizado | **Incluido** | `src/Presentacion/`, `src/Logica/`, `src/Datos/` |
-| README con descripción, funciones e instrucciones | **Incluido y actualizado** | `README.md` |
-| Evidencias mediante capturas | **Pendiente de subir** | El PDF compartido contiene 5 páginas de capturas, pero el archivo PDF y sus imágenes aún no están incorporados al árbol GitHub. Añadirlo y/o extraer capturas verificadas a `docs/evidencias/capturas/`. |
-| Historial de commits identificable | **Existe, requiere refuerzo para esta versión** | Consultar [contribuciones.md](contribuciones.md). Los commits históricos de Alison y Camila identifican cargas de archivos de equipo en el repositorio anterior; no son commits de código de MARKET PULSE. |
-| Participación activa de cada integrante | **En proceso** | Cada integrante tiene un Issue asignado y debe publicar una revisión y una contribución propia relacionada con MARKET PULSE. |
-| Revisión de lenguaje, base de datos, gestión de datos y funcionalidades | **Preparada; revisiones individuales pendientes** | Cada integrante completa su ficha en `revisiones/` y comenta en su Issue asignado. |
-| Enlace público de GitHub | **Disponible; comprobar acceso sin iniciar sesión antes de entregar** | https://github.com/Zoliver27/PEP3-2026-MarketPulse |
+| Código fuente | Incluido en la estructura actual | `src/Presentacion/`, `src/Logica/`, `src/Datos/`; contrastar con la versión local v1.0.2 antes de afirmar sincronización completa. |
+| README con descripción, funciones e instrucciones | Incluido y actualizado | `README.md` |
+| Evidencias mediante capturas | **Incluido** | PDF real versionado: [`docs/evidencias/capturas/Capturas.pdf`](../evidencias/capturas/Capturas.pdf). |
+| Historial de commits identificable | Existe, requiere refuerzo para esta versión | Consultar [contribuciones.md](contribuciones.md). Cada integrante debe registrar su propia contribución desde su cuenta. |
+| Participación activa de cada integrante | En proceso | Cada integrante debe publicar una revisión y una contribución propia relacionada con MARKET PULSE. |
+| Revisión de lenguaje, base de datos, gestión de datos y funcionalidades | Preparada; revisiones individuales pendientes | Cada integrante completa su ficha en `revisiones/` y comenta en su Issue asignado. |
+| Enlace público de GitHub | Disponible; comprobar acceso sin iniciar sesión antes de entregar | https://github.com/Zoliver27/PEP3-2026-MarketPulse |
 
 ## Estado técnico para la revisión
 
@@ -32,7 +32,7 @@ Repositorio: [Zoliver27/PEP3-2026-MarketPulse](https://github.com/Zoliver27/PEP3
 
 ## Estado funcional del MVP
 
-La estimación de avance **aproximadamente 80%** es una autoevaluación interna orientativa del equipo para el MVP de consulta y análisis. No es certificación del docente ni una medición independiente de calidad o preparación para producción. Debe revisarse con el equipo después de probar cada módulo.
+La estimación de avance **aproximadamente 80%** es una autoevaluación interna orientativa del equipo para el MVP de consulta y análisis. No es certificación del docente ni una medición independiente de calidad o preparación para producción.
 
 | Módulo / entregable | Estado | Observación |
 |---|---|---|
@@ -43,16 +43,17 @@ La estimación de avance **aproximadamente 80%** es una autoevaluación interna 
 | Modelo de probabilidades | Incluido | Subida, bajada y estabilidad con muestra mínima |
 | Indicadores técnicos | Incluido | SMA, EMA, RSI, MACD, Bollinger y volatilidad |
 | Backtesting walk-forward | Incluido | Métricas condicionadas a muestra suficiente |
-| Comparador | Implementado en la fuente v1.0.2 compartida; sincronización/validación GitHub pendiente | El ZIP inspeccionado contiene dos series normalizadas a Base 100, intersección temporal y dos líneas. Falta publicar el código exacto en `main` y ejecutar la prueba end-to-end con pares distintos. |
+| Comparador | Implementado en la fuente v1.0.2 compartida; publicación y validación end-to-end pendientes | La copia local contiene dos series normalizadas a Base 100, intersección temporal y dos líneas. Falta probar con activos distintos y verificar la respuesta real del proveedor. |
 | Persistencia propia de datos | No implementada | No hay base de datos ni histórico propio |
-| Pruebas automatizadas en CI | **Aprobadas** | GitHub Actions completó `npm install`, `npm test`, `npm run typecheck` y `npm run build` correctamente. [Ver Run #44948013705](https://github.com/Zoliver27/PEP3-2026-MarketPulse/actions/runs/44948013705). |
+| Pruebas automatizadas en CI | Aprobadas en la ejecución registrada | GitHub Actions completó `npm install`, `npm test`, `npm run typecheck` y `npm run build` en el run documentado. Esto no valida cambios locales posteriores. [Ver Run #44948013705](https://github.com/Zoliver27/PEP3-2026-MarketPulse/actions/runs/44948013705). |
 | Pruebas manuales y despliegue | Pendiente de validar | Pruebas visuales de v1.0.2, proveedores externos y hosting público |
 
 ## Acciones finales antes de entregar en Moodle
 
 - [ ] Alison y Camila completan/publican sus revisiones individuales desde sus cuentas.
 - [ ] Cada integrante registra al menos un commit propio relacionado con MARKET PULSE.
-- [ ] Subir capturas reales de v1.0.2 a `docs/evidencias/capturas/`.
+- [x] PDF de capturas incorporado a `docs/evidencias/capturas/Capturas.pdf`.
 - [ ] Revisar el comparador y registrar el resultado observado.
+- [ ] Confirmar si el código publicado en `main` corresponde íntegramente a la versión local v1.0.2.
 - [ ] Verificar que el enlace sea público y abrirlo sin iniciar sesión.
 - [ ] Publicar en Moodle el enlace público del repositorio.
