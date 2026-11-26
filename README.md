@@ -6,7 +6,7 @@
 
 Plataforma web académica para consultar criptomonedas y divisas, visualizar historiales de mercado y estudiar estimaciones estadísticas de subida, bajada y estabilidad.
 
-> **Versión organizada en GitHub:** v1.0.2. El equipo ha informado que la aplicación se ejecuta localmente. El despliegue público todavía no está configurado. Las capturas incorporadas al repositorio deben identificar exactamente la versión que aparece en ellas.
+> **Versión organizada en GitHub:** v1.0.2. El equipo ha informado que la aplicación se ejecuta localmente. El despliegue público todavía no está configurado. El PDF de capturas ya está versionado en [docs/evidencias/capturas/Capturas.pdf](docs/evidencias/capturas/Capturas.pdf).
 
 ## Equipo autor
 
@@ -18,7 +18,7 @@ Las responsabilidades específicas de MARKET PULSE deben ser confirmadas por cad
 
 ## Avance del proyecto
 
-**Estimación interna orientativa del MVP funcional: aproximadamente 80%.** Es una autoevaluación inicial del equipo, no una certificación del docente ni una declaración de que el producto esté listo para producción. La estimación debe contrastarse con las funciones efectivamente probadas. La persistencia propia de datos y el despliegue público siguen pendientes. En el código fuente v1.0.2 compartido por el equipo, el comparador implementa dos series normalizadas a Base 100 y alineación temporal; falta sincronizar esa versión completa al árbol de GitHub y registrar la validación end-to-end.
+**Estimación interna orientativa del MVP funcional: aproximadamente 80%.** Es una autoevaluación inicial del equipo, no una certificación del docente ni una declaración de que el producto esté listo para producción. La estimación debe contrastarse con las funciones efectivamente probadas. La persistencia propia de datos y el despliegue público siguen pendientes. En el código fuente v1.0.2 compartido por el equipo, el comparador implementa dos series normalizadas a Base 100 y alineación temporal; la sincronización completa de esa versión a `main` y la validación end-to-end siguen pendientes.
 
 Consulta la [matriz de cumplimiento de la rúbrica](docs/seguimiento/matriz-rubrica.md) para revisar componentes implementados y tareas pendientes.
 
@@ -33,7 +33,7 @@ Consulta la [matriz de cumplimiento de la rúbrica](docs/seguimiento/matriz-rubr
 - Backtesting walk-forward y métricas de evaluación cuando existe muestra suficiente.
 - Secciones de criptomonedas, divisas, comparador, metodología e información del proyecto.
 
-El estado de cada componente y sus limitaciones están descritos en [docs/seguimiento/matriz-rubrica.md](docs/seguimiento/matriz-rubrica.md). La implementación del comparador en el ZIP v1.0.2 ya contempla dos curvas; la publicación y comprobación de esa versión en GitHub siguen pendientes.
+El estado de cada componente y sus limitaciones están descritos en [docs/seguimiento/matriz-rubrica.md](docs/seguimiento/matriz-rubrica.md). La implementación del comparador en el ZIP v1.0.2 ya contempla dos curvas; la publicación de la versión completa y su comprobación end-to-end en GitHub siguen pendientes.
 
 ## Lenguajes y tecnologías
 
@@ -128,7 +128,7 @@ npm run dev
 
 ## Evidencias de funcionamiento
 
-El directorio [docs/evidencias/](docs/evidencias/) explica cómo registrar capturas reales. Las imágenes del PDF compartido en la conversación todavía no están publicadas como archivos en este repositorio. Antes de enviar la actividad, incorporarlas a `docs/evidencias/capturas/` y comprobar que muestran v1.0.2, con datos auténticos y sin credenciales visibles.
+El PDF con las capturas reales ya está incorporado y versionado en [`docs/evidencias/capturas/Capturas.pdf`](docs/evidencias/capturas/Capturas.pdf). Puede abrirse directamente desde GitHub. La matriz de rúbrica y el registro de evidencias enlazan este archivo. Las capturas documentan lo que aparece en pantalla y no sustituyen la validación técnica del comparador.
 
 ## Participación y commits
 
